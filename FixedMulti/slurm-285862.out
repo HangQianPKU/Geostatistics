@@ -1,0 +1,17 @@
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Traceback (most recent call last):
+  File "/var/spool/slurmd/job285862/slurm_script", line 63, in <module>
+    trace = pm.sample(tune=1000, cores=8)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/home/hangqian/miniconda3/envs/pymc_env5/lib/python3.11/site-packages/pymc/sampling/mcmc.py", line 708, in sample
+    model.check_start_vals(ip)
+  File "/lustre/home/hangqian/miniconda3/envs/pymc_env5/lib/python3.11/site-packages/pymc/model.py", line 1700, in check_start_vals
+    raise SamplingError(
+pymc.exceptions.SamplingError: Initial evaluation of model at starting point failed!
+Starting values:
+{'rates_log__': array([ 0.27131041, -0.45036483,  0.17756995, -0.39868438]), 'switchpoints_ordered__': array([-0.4907587 ,  7.11596387,  7.67322058])}
+
+Logp initial evaluation results:
+{'rates': -4.21, 'switchpoints': -inf, 'counts': -204522.19}
+You can call `model.debug()` for more details.
