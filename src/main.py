@@ -39,8 +39,9 @@ mantissa = args.mantissa
 exponent = args.exponent
 job_name = args.job_name
 
-draws = int(mantissa * 10**exponent)
-tune = draws//2
+total = int(mantissa * 10**exponent)
+draws = total//2
+tune = total//2
 
 # 构建完整的输出目录路径
 output_directory = os.path.join("../data", job_name)
