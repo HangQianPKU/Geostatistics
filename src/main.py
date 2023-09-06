@@ -21,11 +21,11 @@ def main():
     k = 3
     mantissa = 2
     exponent = 2
-    job_name = "src"
+    job_name = "interval_test"
 
 
     total = int(mantissa * 10**exponent)
-    draws = total //2
+    draws = total // 2
     tune = total // 2
 
 
@@ -36,7 +36,10 @@ def main():
     os.makedirs(output_directory, exist_ok=True)
 
     # 重定向输出结果到文件
-    output.redirect_output(output_directory)
+    # 可选输出方式：全部输出（redirect_output)或者间隔输出(redirect_interval_output)
+    output.redirect_interval_output(output_directory)
+    #output.redirect_output(output_directory)
+
 
     # 调用数据导入和预处理模块
     ages, zircons_data = mydata.process_data()
